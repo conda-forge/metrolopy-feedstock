@@ -5,9 +5,13 @@ Home: https://nrc-cnrc.github.io/MetroloPy
 
 Package license: GPL-3.0-only
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/metrolopy-feedstock/blob/master/LICENSE.txt)
 
 Summary: tools for dealing with measured quantities: uncertainty propagation and unit conversion
+
+Development: https://github.com/nrc-cnrc/Metrolopy
+
+Documentation: https://nrc-cnrc.github.io/MetroloPy
 
 A pure python package with tools for handling first order and Monte-Carlo
 propagation of uncertainty; handles relative, absolute, and expanded
