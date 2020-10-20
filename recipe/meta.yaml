@@ -21,7 +21,7 @@ requirements:
     - python >=3.5
   run:
     - numpy >= 1.13
-    - matplotlib
+    - matplotlib-base
     - pandas
     - python >=3.5
     - scipy
