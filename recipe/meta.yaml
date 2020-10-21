@@ -1,5 +1,5 @@
 {% set name = "metrolopy" %}
-{% set version = "0.6.0" %}
+{% set version = "0.6.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d970b7403892bb01899def3bcd5303882e0acdf59a4bd3c42af69045d3feccf2
+  sha256: f75cbb68ae4607fc5c8731e047aec5f25c40c375f72eada584a592da6bb6ac9f
 
 build:
   number: 0
