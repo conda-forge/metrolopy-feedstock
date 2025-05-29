@@ -18,13 +18,13 @@ build:
 requirements:
   host:
     - pip
-    - python {{ python_min }}
-    - setuptools
+    - python
+    - wheel
   run:
     - numpy >=1.13
     - matplotlib-base
     - pandas
-    - python >={{ python_min }}
+    - python
     - scipy
 
 test:
