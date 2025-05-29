@@ -20,7 +20,6 @@ requirements:
     - pip
     - python
     - setuptools
-    - wheel
   run:
     - numpy >=1.13
     - matplotlib-base
