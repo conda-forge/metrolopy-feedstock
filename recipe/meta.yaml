@@ -19,6 +19,7 @@ requirements:
   host:
     - pip
     - python
+    - setuptools
     - wheel
   run:
     - numpy >=1.13
