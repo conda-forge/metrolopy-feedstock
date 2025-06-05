@@ -92,14 +92,6 @@ def verify_config(ns):
             "Setting this variable implies agreement to the licensing terms of the SDK by Apple."
         )
 
-    elif ns.config.startswith("osx"):
-        if "OSX_SDK_DIR" not in os.environ:
-            raise RuntimeError(
-                "Need OSX_SDK_DIR env variable set. Run 'export OSX_SDK_DIR=$PWD/SDKs' "
-                "to download the SDK automatically to '$PWD/SDKs/MacOSX<ver>.sdk'. "
-                "Note: OSX_SDK_DIR must be set to an absolute path. "
-                "Setting this variable implies agreement to the licensing terms of the SDK by Apple."
-            )
 
 def main(args=None):
     p = ArgumentParser("build-locally")
@@ -129,7 +121,8 @@ def main(args=None):
             run_docker_build(ns)
         elif ns.config.startswith("osx"):
             run_osx_build(ns)
-
+        elif ns.config.startswith("win"):
+            run_win_build(ns)
     finally:
         recipe_license_file = os.path.join(
             "recipe", "recipe-scripts-license.txt"
