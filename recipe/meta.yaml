@@ -19,7 +19,7 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
-    - uv_build
+    - uv-build
   run:
     - numpy >=1.17.3
     - matplotlib-base >=3.1.2
