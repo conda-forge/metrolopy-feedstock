@@ -45,7 +45,7 @@ about:
     propagation of uncertainty; handles relative, absolute, and expanded
     uncertainties of quantities with units.
   license: GPL-3.0-only
-  license_file: metrolopy/license.txt
+  license_file: LICENSE
   doc_url: https://nrc-cnrc.github.io/MetroloPy
   dev_url: https://github.com/nrc-cnrc/Metrolopy
 
