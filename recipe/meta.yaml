@@ -1,5 +1,5 @@
 {% set name = "metrolopy" %}
-{% set version = "1.0.2" %}
+{% set version = "1.0.3" %}
 
 
 package:
@@ -8,24 +8,25 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9812cc8c8aa9bb40855e53bbf4d3bce20a0b46aa4382f3af1ee67621a1b32d82
+  sha256: 70227108436fd0f5711148844d24f2e24c6b87e9c9a6f2c46bf4294be5d808a1
 
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
     - pip
     - python {{ python_min }}
-    - setuptools
+    - uv-build
   run:
-    - numpy >=1.13
-    - matplotlib-base
-    - pandas
+    - numpy >=1.17.3
+    - matplotlib-base >=3.1.2
+    - pandas >=0.25.2
     - python >={{ python_min }}
-    - scipy
+    - scipy >=1.3.2
+    - ipython >=7.9.0
 
 test:
   imports:
@@ -45,7 +46,7 @@ about:
     propagation of uncertainty; handles relative, absolute, and expanded
     uncertainties of quantities with units.
   license: GPL-3.0-only
-  license_file: metrolopy/license.txt
+  license_file: LICENSE
   doc_url: https://nrc-cnrc.github.io/MetroloPy
   dev_url: https://github.com/nrc-cnrc/Metrolopy
 
