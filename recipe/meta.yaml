@@ -9,10 +9,9 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: f40427004e6cd09823129f8b0d64a4a952f249d9f93744a01022eb4a816ac517
-  
+
 context:
   python_min: "3.10"
-  
 build:
   number: 0
   noarch: python
