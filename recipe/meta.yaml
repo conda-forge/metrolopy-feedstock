@@ -10,6 +10,9 @@ source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 08773ee5221dc7cefaf7885af0ed4960529c3a4fe58f9b0088287aaae9da4c6d
 
+context:
+  python_min: "3.10"
+
 build:
   number: 0
   noarch: python
@@ -18,7 +21,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.10
+    - python >={{ python_min }}
     - uv-build
   run:
     - numpy >=1.25.0
